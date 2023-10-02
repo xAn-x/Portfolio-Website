@@ -1,0 +1,389 @@
+/* --------- GLobal ---------------- */
+.pageLayout {
+    padding: 50px;
+    height: 100%;
+    margin-top: 20px;
+    overflow-x: hidden;
+}
+
+/* -----------------------HOME Component---------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+
+.homeHeading {
+    color: #FF007F;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0s forwards;
+}
+
+
+.pageHeading {
+    font-family: monospace;
+    margin: 20px 0px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+
+
+.wrapper {
+    margin-top: 1%;
+    width: 100%;
+    height: 100%;
+    width: 100vw;
+}
+
+.line__1,
+.line__2 {
+    white-space: nowrap;
+    /* keep text in one line */
+    overflow: hidden;
+    font-family: "Major Mono Display", monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.line__1 {
+    border-right: 2px solid rgba(17, 17, 17, 0.9);
+
+    /* define animation types for text + cursor */
+    animation: animated-text__1 1s steps(30, end) 1s 1 normal both,
+        animated-cursor__1 1s steps(30, end) 1s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.line__2 {
+    border-right: 2px solid rgba(17, 17, 17, 0.9);
+
+    /* define animation types for text + cursor */
+    animation: animated-text__2 2s steps(30, end) 1s 1 normal both,
+        animated-cursor__2 900ms steps(30, end) infinite;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+@keyframes animated-cursor__1 {
+    from {
+        border-right-color: rgba(17, 17, 17, 0.9);
+    }
+
+    to {
+        border-right-color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+@keyframes animated-cursor__2 {
+    from {
+        border-right-color: rgba(17, 17, 17, 0.9);
+    }
+
+    to {
+        border-right-color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+@keyframes animated-text__1 {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 24rem;
+    }
+}
+
+@keyframes animated-text__2 {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 40rem;
+    }
+}
+
+
+.aboutPara {
+    text-align: justify;
+    padding: 10px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 4s forwards;
+    border: 1px solid beige;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 75vw;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.viewMoreBtn {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 4.5s forwards;
+    font-size: 1.5rem;
+}
+
+
+
+
+/* ------------------- ABOUT ----------------------> */
+
+
+.aboutHeading {
+    font-family: monospace;
+    margin: 20px 0px;
+}
+
+
+.about_para1 {
+    font-family: monospace;
+    text-align: left;
+    width: 75vw;
+    opacity: 0.5;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.about_para2 {
+    color: thistle;
+    font-size: 1.5rem;
+    border: 1px solid thistle;
+    border-radius: 5px;
+    padding: 2rem;
+    width: 75vw;
+}
+
+/* ------------------- Skills ----------------------> */
+
+
+.skillHeading {
+    font-family: monospace;
+    margin: 20px 0px;
+}
+
+.skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skillBanner {
+    width: 150px;
+    height: 100px;
+}
+
+.skillBox {
+    opacity: 0.4;
+    margin: 3px;
+    cursor: pointer;
+}
+
+
+.skillBox:hover {
+    opacity: 1;
+}
+
+.skillHeading {
+    width: 150px;
+    text-align: center;
+}
+
+
+
+/* ------------------- Projects ----------------------> */
+.projectContainer {
+    width: 80vw;
+    margin: 10px auto;
+
+}
+
+.projectBox {
+    margin: 20px;
+    padding: 20px auto;
+    text-align: center;
+    border-bottom: 1px solid palegoldenrod;
+    padding: 10px;
+}
+
+.projectImage {
+    height: 300px;
+    width: 70vw;
+    border-radius: 10px;
+}
+
+.projectTitle {
+    text-align: center;
+    color: #FF007F
+}
+
+.projectDiscription {
+    font-size: 1.2rem;
+    color: whitesmoke;
+    text-align: justify;
+}
+
+.linkContainer {
+    width: 30%;
+    margin: 15px;
+    justify-content: space-between;
+}
+
+
+.projectLink {
+    width: 50px;
+    height: 50px;
+}
+
+/* ------------------- Socials ----------------------> */
+
+.socialsContainer {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.socialIcon {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.socialIcon:hover {
+    opacity: 1;
+}
+
+/* ----------------- MEDIA Queries ------------------------------ */
+@media screen and (max-width: 400px) {
+
+
+    .line__1,
+    .line__2 {
+        font-size: 1.2rem;
+    }
+
+    @keyframes animated-text__1 {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 15rem;
+        }
+    }
+
+    @keyframes animated-text__2 {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 24rem;
+        }
+    }
+
+    .aboutPara {
+        font-size: 15px;
+        width: 85vw;
+    }
+
+    .viewMoreBtn {
+        font-size: 1rem;
+    }
+
+    .pageLayout {
+        padding: 17px;
+        margin-top: 15px;
+    }
+
+    .about_para1 {
+        font-size: 1.2rem;
+        width: 85vw;
+    }
+
+    .about_para2 {
+        font-size: 15px;
+        width: 85vw;
+    }
+
+    .skillBanner {
+        width: 80px;
+        height: 60px;
+    }
+
+    .skillHeading {
+        width: 80px;
+        font-size: 15px;
+    }
+
+    .skillBox {
+        margin: 10px;
+        opacity: 1;
+    }
+
+    .socialsContainer {
+        width: 85vw;
+        margin: 5px auto;
+        padding: 5px;
+        justify-content: center;
+    }
+
+    .socialIcon {
+        height: 30px;
+        width: 30px;
+        margin: 5px;
+        opacity: 1;
+    }
+
+    .projectContainer {
+        width: 100%;
+        margin: 5px auto;
+
+    }
+
+    .projectBox {
+        margin: 10px;
+        padding: 10px auto;
+        text-align: center;
+        border-bottom: 1px solid palegoldenrod;
+    }
+
+    .projectImage {
+        height: 300px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .projectTitle {
+        text-align: center;
+        color: #FF007F
+    }
+
+    .projectDiscription {
+        font-size: 1rem;
+        color: whitesmoke;
+        text-align: justify;
+    }
+
+    .linkContainer {
+        width: 70%;
+        margin: 15px;
+    }
+
+    .projectLink {
+        width: 30px;
+        height: 30px;
+    }
+}
